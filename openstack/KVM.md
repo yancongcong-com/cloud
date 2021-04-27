@@ -345,7 +345,7 @@ Hypervisor /VMM的选择
   2. 如果在安装过程中出现要填写参数的情况，安装程序首先会去查找Kickstart生成的文件，如果找到合适的参数，就采用所找到的参数；如果没有找到合适的参数，是需要安装着手工干预了
 
      ```shell
-     virt-install --name=centos7-4 --disk path=/kvm/vm/centos7.0-4.qcow2 --vcpus=1 --ram=1024--network network=default --graphics vnc,listen=0.0.0.0 --os-type=linux --os-variant=rhel7  --location /kvm/iso//CentOS-7-x86_64-DVD-2003.iso
+     virt-install --name=centos7-4 --disk path=/kvm/vm/centos7.0-4.qcow2 --vcpus=1 --ram=1024 --network network=default --graphics vnc,listen=0.0.0.0 --os-type=linux --os-variant=rhel7  --location /kvm/iso/CentOS-7-x86_64-DVD-2003.iso
      --extra-args="ks=http://172.16.10.22/anaconda-ks.cfg"
      ```
 
@@ -586,7 +586,6 @@ Hypervisor /VMM的选择
   qemu-img info test.qcow2
   qemu-img create -f qcow2 test1.qcow2 1g -o preallocation=off  #关闭预分配，默认关闭
   qemu-img info test1.qcow2
-  
   ```
   
 - 后备差异虚拟磁盘
@@ -834,8 +833,14 @@ brtcl  show
 #列出网络模式
 [root@localhost ~]# virsh domiflist rhel7.1
 #dhcp信息
-[root@localhost ~]# ps aux |g[root@localhost ~]#rep dnsmasq
+[root@localhost ~]# ps aux |grep dnsmasq
 ```
+
+
+
+# 网卡绑定
+
+- 
 
 
 

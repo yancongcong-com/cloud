@@ -566,6 +566,14 @@ success
 [root@servera ~]# semanage port  -l |grep http
 ```
 
+# su
+
+```shell
+[root@servera ~]# vim /etc/pam.d/su
+```
+
+
+
 
 
 
