@@ -1,0 +1,2 @@
+c = None
+print(c)
